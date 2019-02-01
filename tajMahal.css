@@ -69,8 +69,11 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-#tajMahal {
+#tajMahal{
     border: 5px solid #f44242;
+}
+#gameCanvas {
+  border: 5px solid black;
 }
 .canvas {
   float: left;
@@ -84,9 +87,11 @@
   clear: both;
   display: table;
 }
+body {
+  font-family: Trebuchet MS;
+}
 p {
   font-size: x-large;
-  font-family: cursive;
   color: #f44242;
 }
 button {
