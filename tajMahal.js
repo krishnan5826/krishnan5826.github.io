@@ -275,3 +275,68 @@ function checkReturningCamel () {
     }
 }
 */
+
+var rectX = 0;
+var rectY = 250;
+var rectW = 50;
+var rectH = 50;
+var game_moveAmount = 2;
+/*var difficultyLevel = document.getElementById("level").value;
+if (difficultyLevel === "medium") {
+  game_game_moveAmount = 10;
+}
+*/
+function drawObjects () {
+    // associate/join the canvas on index.html with javascript
+    var canvas = document.getElementById('gameCanvas');
+    // associate 2D draw tools with your canvas
+
+    var ctx2 = canvas.getContext('2d');
+    ctx2.fillStyle = "white";
+    ctx2.fillRect(0, 0, 500, 500);
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = "red";
+    ctx.fillRect(rectX, rectY, rectW, rectH);    // x coordinate, y coordinate, width, height
+    ctx.fillRect(250, 0, 5, 20);
+    ctx.fillRect(250, 480, 5, 20);
+
+}
+function animate_game () {   // these are the frames that get animated/repeated
+    b = requestAnimationFrame(animate_game);
+    drawObjects();
+    moveSquare();
+    checkSquare();
+}
+
+function startAnimation_game () {
+    animate_game();
+    //alert(difficultyLevel);
+    //alert(5);
+}
+
+
+function moveSquare () {
+    rectX = rectX + game_moveAmount;  // modify x-coordinate
+}
+function checkSquare() {
+    if (rectX > 450) {
+        rectX = 0;
+    }
+}
+
+function stopAnimation_game () {
+    cancelAnimationFrame(b);
+    var score = Math.abs(250 - rectX);
+    var statement = "Your score was " + score + ", meaning that you traveled " + rectX + " units, which was "  + score + " units away from the center!";
+    document.getElementById("score").innerHTML = statement;
+
+}
+function reset () {
+    var canvas = document.getElementById('gameCanvas');
+    // associate 2D draw tools with your canvas
+
+    var ctx2 = canvas.getContext('2d');
+    ctx2.fillStyle = "white";
+    ctx2.fillRect(0, 0, 500, 500);
+    ctx2.fillRect(0, 0, 500, 500);
+}
