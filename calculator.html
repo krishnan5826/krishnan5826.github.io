@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+    <script src="calculator.js"></script>
+    <link href="calculator.css" rel="stylesheet" type="text/css">
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <!-- top navbar code -->
+  <div class="navbar">
+<a href="https://krishnan5826.github.io/index.html">Home</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/birth.html">Birth</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/family.html">Family</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/favorites.html">Favorites</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/school.html">School</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/soccer.html">Soccer</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/india.html">India</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/cs.html">Computer Science</a>
+<a class="placeholder">|</a>
+<div class="dropdown">
+  <button class="dropbtn">JavaScript Projects
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="https://krishnan5826.github.io/js_miniprojects.html">Mini-Projects</a>
+    <a href="https://krishnan5826.github.io/calculator.html">Calculator</a>
+    <a href="https://krishnan5826.github.io/madlibs.html">Madlib Generator</a>
+    <a href="https://krishnan5826.github.io/Quiz/index.html">Soccer Quiz</a>
+  </div>
+</div>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/credits.html">Credits</a>
+</div>
+  <div class="visible-phone">
+<h1>JavaScript Calculator</h1>
+<div id="program">
+
+<form name="calculator" align = "center">
+    <input name="calcWindow" type="text" readonly="true" id="window" size="25">
+    <br><br>
+	<br><br>
+  <button class="number" type="button" value="7" onclick="document.calculator.calcWindow.value+=7">7</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="8" onclick="document.calculator.calcWindow.value+=8">8</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="9" onclick="document.calculator.calcWindow.value+=9">9</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="+" onclick="document.calculator.calcWindow.value+='+'">+</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button class="operation" type="button" value="log" onclick="document.calculator.calcWindow.value=logarithm(document.calculator.calcWindow.value)">log</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button class="operation" type="button" value="sine" onclick="document.calculator.calcWindow.value=sine(document.calculator.calcWindow.value)">sin</button>
+
+    <br><br>
+	<button class="number" type="button" value="4" onclick="document.calculator.calcWindow.value+=4">4</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="5" onclick="document.calculator.calcWindow.value+=5">5</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="6" onclick="document.calculator.calcWindow.value+=6">6</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="-" onclick="document.calculator.calcWindow.value+='-'">-</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="round" onclick="document.calculator.calcWindow.value=round(document.calculator.calcWindow.value)">Rnd</button>&nbsp&nbsp&nbsp&nbsp
+  <button class="operation" type="button" value="cosine" onclick="document.calculator.calcWindow.value=cosine(document.calculator.calcWindow.value)">cos</button>
+    <br><br>
+    <button class="number" type="button" value="1" onclick="document.calculator.calcWindow.value+=1">1</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="2" onclick="document.calculator.calcWindow.value+=2">2</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="3" onclick="document.calculator.calcWindow.value+=3">3</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="*" onclick="document.calculator.calcWindow.value+='*'">*</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="abs" onclick="document.calculator.calcWindow.value=abs(document.calculator.calcWindow.value)">Abs</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="operation" type="button" value="tangent" onclick="document.calculator.calcWindow.value=tangent(document.calculator.calcWindow.value)">tan</button>
+
+    <br><br>
+    &nbsp&nbsp<button class="number" type="button" value="0" onclick="document.calculator.calcWindow.value+=0">0</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="3.14159" onclick="document.calculator.calcWindow.value+='3.14159'">π</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="2.71828" onclick="document.calculator.calcWindow.value+='2.71828'"><em>e</em></button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="." onclick="document.calculator.calcWindow.value+='.'">.</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="/" onclick="document.calculator.calcWindow.value+='/'">/</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="^" onclick="document.calculator.calcWindow.value+='^'">^</button>&nbsp&nbsp
+	<button class="operation" type="button" value="sqrt" onclick="document.calculator.calcWindow.value=sqrt(document.calculator.calcWindow.value)">√</button>&nbsp&nbsp&nbsp&nbsp
+
+	<!--
+    <button type="button" value="(" onclick="document.calculator.calcWindow.value+='('">(</button>
+    <button type="button" value=")" onclick="document.calculator.calcWindow.value+=')'">)</button>
+    <button type="button" value="√" onclick="document.calculator.calcWindow.value+='√'">√</button>
+    -->
+	<br><br>
+  <button class="compute" type="button" value="=" onclick="document.calculator.calcWindow.value=calculate(document.calculator.calcWindow.value)">=</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  &nbsp&nbsp
+	<button class="compute" type="reset" value="reset" onclick="document.calculator.calcWindow.value">CLR</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button class = "compute" type="button" value="del" onclick="document.calculator.calcWindow.value=backspace(document.calculator.calcWindow.value)"><<<</button>
+    </form>
+</div>
+</div>
+<br><br><br><br>
+<div id="table">
+<table align="center">
+  <col width="90">
+  <col width="90">
+  <col width="90">
+  <tr>
+	   <th>Operators Handbook</th>
+     <th>Supported Features</th>
+     <th>Features not supported</th>
+  </tr>
+  <tr>
+	<td style="color: green;">
+	<b>Common operators:</b> <br>
+	<b>+</b> : computes the sum of any two numbers<br>
+	<b>-</b>  : computes the difference between any two numbers<br>
+	<b>*</b> : Multiplies any two numbers<br>
+	<b>/</b> : Divides any two numbers<br>
+
+	</td>
+	<td><br><b>Single digit computations:</b> like <br>
+	<em>8 + 2</em><br>
+	<em>8 - 2</em><br>
+	<em>8 * 2</em><br>
+	<em>8 / 2</em><br>
+	</td>
+    <td style="color: red;"><b>Order of Operations: </b><br>
+	This JavaScript Calculator computes as the numbers are clicked.<br>
+	For example, the expression <em>2 + 4 * 3 </em> will give a result of 18 and not 14 <br>
+	</td>
+  </tr>
+  <tr>
+	<td style="color: green;">
+	<b>Special operations:</b> <br>
+	<b>^</b> : Computes exponent <br>
+	<b>√</b> : Computes the square root <br>
+	<b><em>π</em></b> : Substitues the value of pi (3.14159) <br>
+  <b><em>e</em></b> : Substitues the value of Euler's Number (2.71828) <br>
+  <b>sin</b> : computes the sine of the entered number (in radians) <br>
+  <b>cos</b> : computes the cosine of the entered number (in radians) <br>
+  <b>tan</b> : computes the tangent of the entered number (in radians) <br>
+  <b>log</b> : computes a logarithmic function for the entered number (in radians) <br>
+  <b>Abs</b> : computes the absolute value of the entered number (in radians) <br>
+	<b>Rnd</b> : Rounds up/down the number <br>
+	<b>CLR</b> : Clears values and resets the calculator<br>
+	<b><<<</b> : Backspace, removes the last entered value <br>
+
+	</td>
+    <td><br><b>Multi digit computations: </b>like: <br>
+	<em>286 + 24</em><br>
+	<em>84 - 62</em><br>
+	<em>28 * 22</em><br>
+	<em>88 / 11</em><br>
+	<em>1 + 22 + 333 + 4444</em>
+	</td>
+    <td style="color: red;">Evaluating <b>negative expressions: </b><br>
+	The code does not differentiate between a minus sign and the negative operator. <br>
+	While <i>-88 + 11</i> and <i>-88 -11</i> <b>will work,</b> <i>88 + -11</i> and <i>-88 * -11</i> <b>will not work </b> and will give unpredictable results.
+	</td>
+  </tr>
+  <tr>
+  <td style="color: red;"><b>Compute:</b><br>
+  <b>=</b> : Computes the result of the expression</td>
+    <td><b>Multiple Operations</b> <br>
+	<i>4500 + 550 - 30 * 10 + 2.5 - 0.5 / 10 ^ 2</i>
+	</td>
+    <td style="color:red;">
+        <b>Thank you for viewing! Enjoy!</b>
+	</td>
+  </tr>
+
+</table>
+</div>
+</body>
+</html>

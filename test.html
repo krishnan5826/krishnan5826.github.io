@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Calculator</title>
+    <script src="test.js"></script>
+    <link href="test.css" rel="stylesheet" type="text/css">
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <!-- top navbar code -->
+  <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a class="placeholder">|</a>
+      <a href="birth.html">Birth</a>
+      <a class="placeholder">|</a>
+      <a href="family.html">Family</a>
+      <a class="placeholder">|</a>
+      <a href="favorites.html">Favorites</a>
+      <a class="placeholder">|</a>
+      <a href="school.html">School</a>
+      <a class="placeholder">|</a>
+      <a href="soccer.html">Soccer</a>
+      <a class="placeholder">|</a>
+      <a href="india.html">India</a>
+      <a class="placeholder">|</a>
+      <a href="cs.html">Computer Science</a>
+      <a class="placeholder">|</a>
+      <a href="js_miniprojects.html">JavaScript Mini-Projects</a>
+      <a class="placeholder">|</a>
+      <a href="calculator.html">JavaScript Calculator</a>
+      <a class="placeholder">|</a>
+      <a href="credits.html">Credits</a>
+  </div>
+  <div class="visible-phone">
+<h1>JavaScript Calculator</h1>
+<div id="program">
+<form name="calculator" align = "center">
+    <input name="calcWindow" type="text" readonly="true" id="window" size="25">
+    <br><br>
+	<br><br>
+    &nbsp&nbsp&nbsp&nbsp<button class="number" type="button" value="7" onclick="document.calculator.calcWindow.value+=7">7</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="8" onclick="document.calculator.calcWindow.value+=8">8</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="9" onclick="document.calculator.calcWindow.value+=9">9</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="+" onclick="document.calculator.calcWindow.value+='+'">+</button>&nbsp&nbsp
+	<button class="compute" type="button" value="=" onclick="document.calculator.calcWindow.value=calculate(document.calculator.calcWindow.value)">=</button>&nbsp&nbsp
+	
+    <br><br>
+	<button class="number" type="button" value="4" onclick="document.calculator.calcWindow.value+=4">4</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="5" onclick="document.calculator.calcWindow.value+=5">5</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="6" onclick="document.calculator.calcWindow.value+=6">6</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="-" onclick="document.calculator.calcWindow.value+='-'">-</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="round" onclick="document.calculator.calcWindow.value=round(document.calculator.calcWindow.value)">Rnd</button>&nbsp&nbsp&nbsp&nbsp
+    <br><br>
+    <button class="number" type="button" value="1" onclick="document.calculator.calcWindow.value+=1">1</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="2" onclick="document.calculator.calcWindow.value+=2">2</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="3" onclick="document.calculator.calcWindow.value+=3">3</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="*" onclick="document.calculator.calcWindow.value+='*'">*</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="abs" onclick="document.calculator.calcWindow.value=abs(document.calculator.calcWindow.value)">Abs</button>&nbsp&nbsp&nbsp&nbsp
+	 
+    <br><br>
+    &nbsp&nbsp<button class="number" type="button" value="0" onclick="document.calculator.calcWindow.value+=0">0</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="3.14159" onclick="document.calculator.calcWindow.value+='3.14'">π</button>&nbsp&nbsp&nbsp&nbsp
+    <button class="number" type="button" value="." onclick="document.calculator.calcWindow.value+='.'">.</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="/" onclick="document.calculator.calcWindow.value+='/'">/</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<button class="operation" type="button" value="^" onclick="document.calculator.calcWindow.value+='^'">^</button>&nbsp&nbsp
+	<button class="operation" type="button" value="sqrt" onclick="document.calculator.calcWindow.value=sqrt(document.calculator.calcWindow.value)">√</button>&nbsp&nbsp&nbsp&nbsp
+	
+	<!--
+    <button type="button" value="(" onclick="document.calculator.calcWindow.value+='('">(</button>
+    <button type="button" value=")" onclick="document.calculator.calcWindow.value+=')'">)</button>
+    <button type="button" value="√" onclick="document.calculator.calcWindow.value+='√'">√</button>
+    -->
+	<br><br>
+	<button class="compute" type="reset" value="reset" onclick="document.calculator.calcWindow.value">CLR</button>
+     <button class = "compute" type="button" value="del" onclick="document.calculator.calcWindow.value=backspace(document.calculator.calcWindow.value)"><<<<</button>
+    </form>
+</div>
+</div>
+<table align = "center">
+  <col width="90">
+  <col width="90">
+  <col width="90">
+  <tr>
+	<th>Operators handbook</th>
+    <th>Supported Features</th>
+    <th>Features not supported</th>
+  </tr>
+  <tr>
+	<td>
+	<b>Common operations:</b> <br>
+	+ : computes the sum of any two numbers<br>
+	-  : computes the difference between any two numbers<br>
+	* : Multiplies any two numbers<br>
+	/ : Divides any two numbers<br>
+	
+	</td>
+	<td><br><b>Single digit computations </b>like <br>
+	<i>8 + 2</i><br>
+	<i>8 - 2</i><br>
+	<i>8 * 2</i><br>
+	<i>8 / 2</i><br>
+	</td>
+    <td><b>Order of Operations </b><br>
+	The javascript calculator computes as the numbers are typed.<br>
+	For example, the expression <i>2 + 4 * 3 </i> will give a result of 18 and not 14 <br>
+	</td>
+  </tr>
+  <tr>
+	<td>
+	<b>Special operations:</b> <br>
+	^ : Computes exponent <br>
+	√ : Computes the square root <br>
+	π : Substitues the value of pi <br>
+	Rnd : Rounds up/down the number <br>
+	CLR : Clears values and resets the calculator<br>
+	<<<< : Backspace, removes the last entered value <br>
+	
+	</td>
+    <td><br><b>Multi digit computations </b>like <br>
+	<i>286 + 24</i><br>
+	<i>84 - 62</i><br>
+	<i>28 * 22</i><br>
+	<i>88 / 11</i><br>
+	<i>1 + 22 + 333 + 4444</i>
+	</td>
+    <td>Evaluating <b>negative expressions </b><br>
+	The code does not differentiate between a -ve sign and the -ve operator. <br>
+	While <i>-88 + 11</i> and <i>-88 -11</i> <b>will work,</b> <i>88 + -11</i> and <i>-88 * -11</i> <b>will not work </b> and will give unpredictable results.
+	</td>
+  </tr>
+  <tr>
+  <td><b>Compute:</b><br>
+  = : Computes the result of the expression</td>
+    <td><b>Multiple Operations</b> <br>
+	<i>4500 + 550 - 30 * 10 + 2.5 - 0.5 / 10 ^ 2</i>
+	</td>
+    <td>
+	</td>
+  </tr>
+  
+</table>
+</body>
+</html>

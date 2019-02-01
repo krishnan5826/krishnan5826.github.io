@@ -1,0 +1,99 @@
+/* the following is code taken from https://www.w3schools.com
+/* Add a black background color to the top navigation */
+/* learned about hover drop down nav bars from w3schools */
+.navbar {
+  overflow: hidden;
+  background-color: #f44242;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: cornsilk;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: cornsilk;
+  padding: 14px 16px;
+  background-color: #144680;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: cornsilk;
+  color: #f44242;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.navbar a.placeholder {
+  color: gold;
+  background-color: #f44242;
+}
+.placeholder a:hover {
+  background-color: #144680;
+}
+
+.dropdown-content a:hover {
+  background-color: cornsilk;
+  color: #f44242;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#tajMahal {
+    border: 5px solid #f44242;
+}
+.canvas {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.image::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+p {
+  font-size: x-large;
+  font-family: cursive;
+  color: #f44242;
+}
+button {
+  color: #f44242;
+  height: 100px;
+  width: 200px;
+  font-size: 18px;
+  border: 3px solid #f44424;
+  text-align: center;
+}

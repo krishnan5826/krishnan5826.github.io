@@ -1,0 +1,143 @@
+<!-- beginning of birth.html -->
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- title -->
+   <title>All About Me | My Birth</title>
+   <!-- links to birth.css -->
+   <link href="./birth.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <!-- top navbar HTML code taken from w3schools -->
+  <div class="navbar">
+<a href="https://krishnan5826.github.io/index.html">Home</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/birth.html">Birth</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/family.html">Family</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/favorites.html">Favorites</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/school.html">School</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/soccer.html">Soccer</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/india.html">India</a>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/cs.html">Computer Science</a>
+<a class="placeholder">|</a>
+<div class="dropdown">
+  <button class="dropbtn">JavaScript Projects
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="https://krishnan5826.github.io/js_miniprojects.html">Mini-Projects</a>
+    <a href="https://krishnan5826.github.io/calculator.html">Calculator</a>
+    <a href="https://krishnan5826.github.io/madlibs.html">Madlib Generator</a>
+    <a href="https://krishnan5826.github.io/Quiz/index.html">Soccer Quiz</a>
+    <a href="https://krishnan5826.github.io/tajMahal.html">HTML Canvas Project</a>
+  </div>
+</div>
+<a class="placeholder">|</a>
+<a href="https://krishnan5826.github.io/credits.html">Credits</a>
+</div>
+<!-- heading of webpage -->
+<div class="title">
+   <h1>My Birth</h1>
+</div>
+<br><br>
+<!-- paragraph text -->
+<div class="paragraph">
+   <p>It was a relatively cool February day in <a href="https://en.wikipedia.org/wiki/Chennai" target="_blank">Chennai</a>, one of India's largest cities and the capital of the state of Tamil Nadu. A brisk breeze was in the air,
+      and the rain had finally ended. Chennai was still reeling from the devastating <a href="https://www.britannica.com/event/Indian-Ocean-tsunami-of-2004" target="_blank">Indian Ocean Tsunami</a> of 2004, and hardship and strife were abundant.</p>
+   <p style="color: cornsilk;">texttexttexttexttexttexttexttextexttexttexttexttexttext<img src="img/tsunami.jpg" width="500" height="200" align="middle" />texttexttexttexttexttexttexttexttexttexttexttexttext</p>
+   <p style="text-align: center;">The destruction of the Indian Ocean Tsunami</p>
+   <p>But those feelings were not in the minds of my parents and my grandparents. My father had hastily flown thousands of miles from Tokyo in order to witness the birth of his first child, and emotions ranging from anxiety to fear were racing through his head.
+      My mother, who had learned that she would have a son nine months ago, and had waiting for this moment for seemingly enternity. But finally the moment arose: on February 10, 2004, a beautiful, healthy baby boy entered the world. My entire family felt nothing but joy, and so my father named me <em>Anand</em>, or "joy" in <em>Hindi</em>. And this was how my
+   journey of life began.</p>
+</div>
+<!-- beginning of slideshow HTML code -->
+<h2 style="text-align: center;">My Growth over 14 Years</h2>
+  <!-- Slideshow container -->
+  <!-- code taken from w3schools.com -->
+  <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+          <div class="numbertext">1 / 16</div>
+          <img src="img/5months_KayabachoOuting-1.JPG" style="width:100%">
+          <div class="text">5 Month Year Old Me at a Kayabacho outing in Japan.</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">2 / 16</div>
+          <img src="img/7months_Sitting-4.JPG" style="width:100%">
+          <div class="text">I'm seven months old and am beaming at the camera.</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">3 / 16</div>
+          <img src="img/8months_birthday-4.JPG" style="width:100%">
+          <div class="text">My eigth month old self grinning at the camera in my onesie.</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 16</div>
+          <img src="img/9months_At-IY-PlayingArea-4.JPG" style="width:100%">
+          <div class="text">Playing with fun toys in Tokyo at the age of nine months.</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">5 / 16</div>
+          <img src="img/10months_ReadingNewspaper-1.JPG" style="width:100%">
+          <div class="text">Me trying to read a newspaper at 10 months even though I couldn't read.</div>
+      </div>
+      <div class="mySlides fade">
+          <div class="numbertext">6 / 16</div>
+          <img src="img/14months_INPatio-3.JPG" style="width:100%">
+          <div class="text">Watching a plant grow in our patio in our apartment in Sunnyvale.</div>
+      </div>
+            <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+	</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+
+}
+</script>
+</body>
+</html>

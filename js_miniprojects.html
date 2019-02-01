@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Mini-Projects | Anand Krishnan</title>
+    <link href="./js_miniprojects.css" type="text/css" rel="stylesheet">
+    <script src="js_miniprojects.js"></script>
+</head>
+<body>
+<!-- top nav bar code -->
+<div class="navbar">
+    <a href="https://krishnan5826.github.io/index.html">Home</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/birth.html">Birth</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/family.html">Family</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/favorites.html">Favorites</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/school.html">School</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/soccer.html">Soccer</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/india.html">India</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/cs.html">Computer Science</a>
+    <a class="placeholder">|</a>
+    <div class="dropdown">
+        <button class="dropbtn">JavaScript Projects
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="https://krishnan5826.github.io/js_miniprojects.html">Mini-Projects</a>
+            <a href="https://krishnan5826.github.io/calculator.html">Calculator</a>
+            <a href="https://krishnan5826.github.io/madlibs.html">Madlib Generator</a>
+            <a href="https://krishnan5826.github.io/Quiz/index.html">Soccer Quiz</a>
+            <a href="https://krishnan5826.github.io/tajMahal.html">HTML Canvas Project</a>
+        </div>
+    </div>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/credits.html">Credits</a>
+</div>
+<h1 class="header">JavaScript Mini-Projects</h1>
+<h1 class="sub-header">Anand Krishnan</h1>
+<br><br>
+<div id="table of contents">
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#project1">Mini-Project One - TemperatureBug</a></li>
+    <li><a href="#project2">Mini-Project Two - CalorieCounter</a></li>
+    <li><a href="#project3">Mini-Project Three - AssignGrade</a></li>
+    <li><a href="#project4">Mini-Project Four - BaseConverter</a></li>
+  </ol>
+</div>
+<br>
+<div id="project1">
+<form name="projectOne">
+    <h4>Mini-Project One - TemperatureBug</h4>
+    <p>Mini-Project One (TemperatureBug) Description:</p>
+	<ol>
+	<li>Enter a temperature. If you don't enter the temperature, the default temperature will be zero.</li>
+	<li>Choose whether the unit is Fahrenheit (default)
+       or Celsius.</li>
+	 <li>I will tell you what the season is, along with a beautiful picture and advice for what to do
+       in that season!</li>
+	   </ol>
+    <br>
+    Enter the temperature:
+    <input name="inputOne" type="number" placeholder="Enter temp here...">
+    <br><br>
+    <!-- learned the following code from w3schools and https://stackoverflow.com/questions/5592345/how-to-select-a-radio-button-by-default -->
+    Select the temperature unit:
+    <br><br>
+    <input name="inputTwo" type="radio" value="fahrenheit" checked="checked">Fahrenheit<br>
+    <input name="inputTwo" type="radio" value="celsius">Celsius
+    <br><br>
+    <button type="button" onclick="document.projectOne.result.value=temperatureBug()">Temperature Bug</button>
+    <br><br>
+    Result: <input name="result" type="text" readonly="true" size="100" style="border-style: none">
+	<br><br>
+    <img id="sweltering_summer" src="img/blank.JPG" width="500" height="200">
+    <img id="summer" src="img/blank.JPG" width="200" height="200">
+    <img id="book" src="img/blank.JPG" width="200" height="200">
+    <img id="autumn" src="img/blank.JPG" width="200" height="200">
+    <img id="spring" src="img/blank.JPG" width="200" height="200">
+    <img id="winter" src="img/blank.JPG" width="200" height="200">
+    <img id="snowmen" src="img/blank.JPG" width="200" height="200">
+    <img id="frigid_winter" src="img/blank.JPG" width="200" height="200">
+</form>
+</div>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+<div id="project2">
+<!-- learned the following code from https://www.youtube.com/watch?v=rUjiGOct808 -->
+<form name="projectTwo">
+    <h4>Mini-Project Two - CalorieCounter</h4>
+    <p>Mini-Project Two (CalorieCounter) Description:</p>
+	<ol>
+	<li>Choose an activity (either running, walking, swimming, or biking).</li>
+	<li>Enter how many minutes were spent doing that activity.</li>
+	<li>I will tell you how many calories you burned and how far away you are from meeting the daily goal of 500 calories burned per day!</li>
+	</ol>
+    <h4>Choose an activity:</h4>
+    <select id="myList">
+    <option>Choose an activity</option>
+    <option>Running</option>
+    <option>Walking</option>
+    <option>Swimming</option>
+    <option>Biking</option>
+    </select>
+    <br><br>
+    Time (minutes): <input name="inputTwo" type="number" placeholder="Enter # of minutes here...">
+    <br><br>
+    <button type="button" onclick="document.projectTwo.result.value=calorieCounter()">Calorie Counter</button>
+    <br><br>
+    Result: <input name="result" type="text" style="border-style: none" size="200" readonly="true">
+	<br><br>
+  <img id="running" src="img/blank.JPG" height="200" width="200">
+  <img id="walking" src="img/blank.JPG" height="200" width="200">
+  <img id="swimming" src="img/blank.JPG" height="200" width="200">
+  <img id="biking" src="img/blank.JPG" height="200" width="200">
+	<img id="thumbs_up" src="img/blank.JPG" width="200" height="200">
+	<img id="clap" src="img/blank.JPG" width="200" height="200">
+</form>
+</div>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+<div id="project3">
+<form name="projectThree">
+    <h4>Mini Project Three - AssignGrade</h4>
+    <p>Mini-Project Three (AssignGrade) Description:</p>
+	<ol>
+	<li>Enter the numeric score that you received on your last assignment. If you don't enter a score, then it will be set to the default value of 0%.</li>
+	<li>Choose whether you would like to view your GPA for that assignment (default is yes).</li>
+     <li>Choose whether that assignment was from an "Honors/AP class" (default is no). If it was, it raises your GPA by 0.5.</li>
+	 <li>Click the AssignGrade button, and I will answer all of your questions about your grade!</li>
+    </ol>
+    <br>
+    Type in the percentage score that you got on your last assignment:
+    <input name="inputOne" type="number" placeholder="Type your grade here...">%
+    <br><br>
+    Would you like to calculate your GPA for that score?
+    <br><br>
+    <input name="inputTwo" type="radio" value="yes" checked="checked">Yes<br>
+    <input name="inputTwo" type="radio" value="no">No
+    <br><br>
+    If yes, then was the grade you received from an "Honors/AP" class?
+    <br><br>
+    <input name="inputThree" type="radio" value="yes">Yes<br>
+    <input name="inputThree" type="radio" value="no" checked="checked">No<br>
+    <br><br>
+    <button type="button" onclick="document.projectThree.result.value=assignGrade()">Assign Grade</button>
+    <br><br>
+    Result: <input name="result" style="border-style: none" type="text" readonly="true" size="200">
+</form>
+</div>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+<div id="project4">
+    <h4>Mini Project Four - BaseConverter</h4>
+    <p>Mini-Project Four (BaseConverter) Description:</p>
+    <ul>
+      <li><a href="#a">Project 4A:</a> Enter a number in binary code, and the program will convert it into base 10.</li>
+      <li><a href="#b">Project 4B:</a> Enter a number in base 10, and the program will convert it into binary code.</li>
+      <li><a href="#c">Project 4C:</a> Enter a number in base 10, and the program will convert it into base x.</li>
+      <li><a href="#d">Project 4D:</a> Enter a number in base x, and the program will convert it into base 10.</li>
+      <li><a href="#e">Project 4E:</a> Enter a number in base x, and the program will convert it into base y.</li>
+    </ul>
+    <br>
+    <form name="toBaseTen">
+        <h5 id="a">a) Convert from base 2 (aka binary) to base 10: remember, you can only input 0's and 1's!</h5>
+        <br>
+        Original Number (in base 2): <input name="inputOne" type="number">
+        <br><br>
+        <input name="inputTwo" value="2" type="text" style="border-style: none" id="valueof2">
+        <br>
+        <button type="button" onclick="document.toBaseTen.result.value=fromTwoToTen()">Convert from base 2 to base 10</button>
+        <br><br>
+        Result (in base 10): <input name="result" type="text" size="60" style="border-style: none">
+    </form>
+    <br><br>
+    <p>-----------------------------------------------------------------------------------------------</p>
+    <br><br>
+    <form name="fromBaseTen">
+        <h5 id="b">b) Convert from base 10 to base 2</h5>
+        <br>
+        Original number (in base 10): <input type="number" name="inputOne">
+        <br><br>
+        <input name="inputTwo" value="2" type="text" style="border-style: none" id="valueof2">
+        <br><br>
+        <button type="button" onclick="document.fromBaseTen.result.value=fromTenToTwo()">Convert from base 10 to base 2</button>
+        <br><br>
+       Result (in base 2): <input name="result" type="text" readonly="true" style="border-style:none" size="60">
+    </form>
+    <br><br>
+    <p>-----------------------------------------------------------------------------------------------</p>
+    <br><br>
+    <form name="fromBaseTenToX">
+    <h5 id="c">c) Convert from base 10 to base x</h5>
+    <br><br>
+    Original number (in base 10): <input type="number" name="inputOne">
+    <br><br>
+    Select the base to be converted to (base x):
+    <select id="inputTwo">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <br><br>
+    <button type="button" onclick="document.fromBaseTenToX.result.value=tenToSmall()">Convert from base 10 to base x</button>
+    <br><br>
+    Result: <input type="text" name="result" style="border-style: none" readonly="true" size="100">
+</form>
+<br><br>
+<p>-----------------------------------------------------------------------------------------------</p>
+<br><br>
+<form name="toBaseXToTen">
+    <h5 id="d">d) Convert from base x to base 10</h5>
+    <br><br>
+    Original number: <input type="number" name="inputOne">
+    <br><br>
+    Select the original base (base x):
+    <select id="inputTwo">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <br><br>
+    <button type="button" onclick="document.toBaseXToTen.result.value=smallToTen()">To Base Ten</button>
+    <br><br>
+    Result (in base 10): <input type="text" name="result" style="border-style: none" readonly="true" size="100">
+</form>
+<br><br>
+<p>-----------------------------------------------------------------------------------------------</p>
+<br><br>
+<form name="baseXToY">
+<h5 id="e">e) Convert from base x to base y</h5>
+<br><br>
+Original Number: <input type="number" name="inputOne">
+<br><br>
+Select the original base (base x):
+<select id="inputTwo">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+<br><br>
+Select the base to be converted to (base y):
+<select id="inputThree">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+<br><br>
+<button type="button" onclick="document.baseXToY.result.value=xToY()">Convert from base x to base y</button>
+<br><br>
+Result: <input type="text" name="result" style="border-style: none" size="100" readonly="true">
+</form>
+</div>
+</body>
+</html>

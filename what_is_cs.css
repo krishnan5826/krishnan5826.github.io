@@ -1,0 +1,20 @@
+body {
+  font-family: TimesNewRoman;
+  font-size: 16px;
+  line-height: 2;
+}
+ .top {
+   text-align: left;
+ }
+ .heading {
+   text-align: center;
+ }
+.body {
+  text-align: justify;
+}
+.works_cited_title {
+  text-align: center;
+}
+a {
+  color: black;
+}

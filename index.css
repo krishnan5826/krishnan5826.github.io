@@ -1,0 +1,107 @@
+/* beginning of index.css code
+the following is code taken from https://www.w3schools.com
+Add a black background color to the top navigation */
+/* learned about hover drop down nav bars from w3schools */
+.navbar {
+    overflow: hidden;
+    background-color: #144680;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: cornsilk;
+    padding: 14px 16px;
+    background-color: #144680;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: cornsilk;
+    color: #144680;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.navbar a.placeholder {
+  color: gold;
+  background-color: #144680;
+}
+.placeholder a:hover {
+    background-color: #144680;
+}
+
+.dropdown-content a:hover {
+    background-color: cornsilk;
+    color: #144680;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* styling the elements */
+/* styling the body by establishing the background-color as blue */
+body {
+   background-color: #144680;
+}
+/* styling the header */
+.title {
+   text-align: center;
+   color: gold;
+   font-size: x-large;
+   font-family: Trebuchet MS;
+}
+/* styling the paragraph using CSS elements from stackoverflow */
+.paragraph {
+   direction: ltr;
+   clear: both;
+   position: relative;
+   text-align: justify;
+   color: gold;
+   font-size: large;
+   font-family: Trebuchet MS;
+   line-height: 2; /* code taken from stackoverflow */
+}
+/* links are cornsilk and large with the Trebuchet MS font */
+a {
+   color: cornsilk;
+   font-size: large;
+   font-family: Trebuchet MS;
+}
+/* code taken from w3schools for image positioning */
+.image {
+  float: left;
+  margin-right:35px;
+  margin-bottom:24px
+}

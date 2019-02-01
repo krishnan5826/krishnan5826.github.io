@@ -1,0 +1,104 @@
+/* the following is code taken from https://www.w3schools.com
+/* Add a black background color to the top navigation */
+/* learned about hover drop down nav bars from w3schools */
+.navbar {
+    overflow: hidden;
+    background-color: #144680;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: cornsilk;
+    padding: 14px 16px;
+    background-color: #144680;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: cornsilk;
+    color: #144680;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.navbar a.placeholder {
+  color: gold;
+  background-color: #144680;
+}
+.placeholder a:hover {
+    background-color: #144680;
+}
+
+.dropdown-content a:hover {
+    background-color: cornsilk;
+    color: #144680;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* styling the body elements
+background color is cornsilk, font color is blue, font family is Trebuchet MS */
+body {
+    background-color: cornsilk;
+    color: #144680;
+    font-family: Trebuchet MS;
+}
+/* header is centered and is x-large */
+.title {
+    text-align: center;
+    font-size: x-large;
+}
+/* paragraph is large */
+.paragraph {
+    font-size: large;
+}
+/* links are blue */
+a {
+    color: #144680;
+}
+/* captions are small */
+.caption {
+  font-size: small;
+}
+/* code taken from https://www.computerhope.com/issues/ch001784.htm
+rotating team cheetahs pictures */
+.cheetahs {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

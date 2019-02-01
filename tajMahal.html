@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taj Mahal Canvas Portrait</title>
+    <link href="tajMahal.css" rel="stylesheet" type="text/css">
+    <script src="tajMahal.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <a href="https://krishnan5826.github.io/index.html">Home</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/birth.html">Birth</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/family.html">Family</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/favorites.html">Favorites</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/school.html">School</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/soccer.html">Soccer</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/india.html">India</a>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/cs.html">Computer Science</a>
+    <a class="placeholder">|</a>
+    <div class="dropdown">
+        <button class="dropbtn">JavaScript Projects
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="https://krishnan5826.github.io/js_miniprojects.html">Mini-Projects</a>
+            <a href="https://krishnan5826.github.io/calculator.html">Calculator</a>
+            <a href="https://krishnan5826.github.io/madlibs.html">Madlib Generator</a>
+            <a href="https://krishnan5826.github.io/Quiz/index.html">Soccer Quiz</a>
+            <a href="https://krishnan5826.github.io/tajMahal.html">HTML Canvas Project</a>
+        </div>
+    </div>
+    <a class="placeholder">|</a>
+    <a href="https://krishnan5826.github.io/credits.html">Credits</a>
+</div>
+<br><br><br>
+  <div class="canvas">
+    <canvas id="tajMahal" width="500" height="500"></canvas>
+    <p id="statement1"></p>
+    <button type="button" onclick="startAnimation()">Reveal the hidden image...</button>
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <button type="button" onclick="stopAnimation()">Stop Animation</button>
+  </div>
+  <div class="image">
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <img id="taj_mahal_image" src="img/white.PNG" width="500" height="500">
+    <p id="statement2" style="text-align: center;"></p>
+    <audio id="music" src="relaxing_music.mp3" loop="loop"></audio> <!-- code from stackoverflow, music from https://www.youtube.com/watch?v=20eyYerDDsY -->
+  </div>
+</body>
+</html>

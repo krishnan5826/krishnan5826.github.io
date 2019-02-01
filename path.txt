@@ -1,0 +1,7 @@
+original number
+original base
+destination base
+
+smallToTen
+pass original number and original base
+using returned value, return tenToSmall

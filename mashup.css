@@ -1,0 +1,14 @@
+body {
+  /* code taken from w3schools */
+  background-image: url("img/rma.jpg");
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+a {
+  color: white;
+}
+.video {
+  text-align: center;
+}

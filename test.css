@@ -1,0 +1,91 @@
+/* the following is code taken from https://www.w3schools.com
+/* Add a black background color to the top navigation */
+.topnav {
+   background-color: #144680;
+   overflow: hidden;
+   font-family: Trebuchet MS;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+   float: left;
+   color: white;
+   text-align: center;
+   padding: 19px 25px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+.visible-phone{
+@media (max-width: 480px)
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+   background-color: cornsilk;
+   color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+   background-color: #144680;
+   color: cornsilk;
+}
+.topnav a.placeholder {
+   background-color: #144680;
+   color: gold;
+}
+
+body {
+    background-color: cornsilk;
+    font-family: "Trebuchet MS";
+    font-size: large;
+    color: #144680;
+}
+h1 {
+    color: #144680;
+    text-align: center;
+}
+/* https://www.w3schools.com/css/css3_buttons.asp */
+button {
+    color: #144680;
+    background-color: cornsilk;
+    border-radius: 12px;
+    font-size: 48px;
+
+}
+.number {
+	width: 50px;
+	border: 4px solid black;
+	color: #144680;
+	
+}
+.operation {
+	border: 4px solid black;
+	color: darkgreen;
+	
+}
+.execute {
+	border: 4px solid black;
+	color: red;
+}
+.compute{
+	width: 150px;
+	color: red;
+    background-color: cornsilk;
+    border-radius: 12px;
+    font-size: 48px;
+}
+/* https://stackoverflow.com/questions/5617703/background-color-in-input-and-text-fields */
+input, textarea {
+    background-color: cornsilk;
+    border: 5px solid #144680;
+    font-size: 160%;
+    padding: 5px 5px;
+	text-align: right;
+	color: red;
+}
+#program {
+  //border: 3px solid #144680;
+  padding: 10px 10px;
+}

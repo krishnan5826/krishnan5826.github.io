@@ -1,0 +1,53 @@
+function calculate (expression) {
+	
+	alert("you are in calculate()");
+	
+	
+	var ctr = 0;
+	var l = expression.length;
+	var var1 = "";
+	var subtotal = 0;
+	var oper = "";
+	var chr = "";
+	var flagForChr = "false";
+	
+	alert("The expression is " + expression.toString());
+	alert("total numbers of characters in the expression is " + l);
+	
+	
+	while (ctr <= l) {
+		
+		chr = expression.substr(ctr, 1);
+		
+		
+		if (chr === '0' || chr === '1' || chr === '2' || chr === '3' || chr === '4' || chr === '5' || chr === '6' || chr === '7' || chr === '8' || chr === '9') {
+			alert("you have encountered a number: " + chr);
+			
+			/* if (flagForChr === "false") {
+				var1 = var1 + chr;
+				alert("value of your number is " + var1);
+			}
+			
+			else {
+				alert("you have encountered an operator: " + chr);
+				var1 = chr;
+				subtotal = subtotal + oper + var1;
+				alert(subtotal);
+			}
+			*/
+		}
+		
+	
+		if (chr === '+') {
+			subtotal = subtotal + var1;
+			flagForChr = "true";
+			oper = chr;
+			alert("operator is:  " + oper);
+			
+		}
+		
+		
+		ctr++;
+	
+	}
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mad-libs Game</title>
+  <link href="./madlibs.css" type="text/css" rel="stylesheet">
+  <script src="madlibs.js"></script>
+</head>
+<body>
+<div class="navbar">
+  <a href="https://krishnan5826.github.io/index.html">Home</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/birth.html">Birth</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/family.html">Family</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/favorites.html">Favorites</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/school.html">School</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/soccer.html">Soccer</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/india.html">India</a>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/cs.html">Computer Science</a>
+  <a class="placeholder">|</a>
+  <div class="dropdown">
+    <button class="dropbtn">JavaScript Projects
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="https://krishnan5826.github.io/js_miniprojects.html">Mini-Projects</a>
+      <a href="https://krishnan5826.github.io/calculator.html">Calculator</a>
+      <a href="https://krishnan5826.github.io/madlibs.html">Madlib Generator</a>
+      <a href="https://krishnan5826.github.io/Quiz/index.html">Soccer Quiz</a>
+      <a href="https://krishnan5826.github.io/tajMahal.html">HTML Canvas Project</a>
+    </div>
+  </div>
+  <a class="placeholder">|</a>
+  <a href="https://krishnan5826.github.io/credits.html">Credits</a>
+</div>
+  <!-- end of navigation  bar code -->
+  <!-- header of the page -->
+  <h1 class="title">Mad-lib Generator</h1>
+  <p style="line-height: 2;">Hey, do <em>you</em> know what a mad-lib is? It's where <em>you</em> enter in some words and generate a really funny story! We have three
+  madlibs for <em>you</em> to try, that will be randomly generated each time you click the <b>Mad-lib button</b>! The words that you entered will be uppercased in the story. Enjoy, and be prepared for lots of laughs!</p>
+  <p>Enter the following information to create <em>your</em> mad-lib:</p>
+  <br>
+  <form name="madlibs">
+    <p>Nouns:</p>
+   Plural Noun 1: &nbsp&nbsp<input type="text" name="plural_noun1">
+   Plural Noun 2: &nbsp&nbsp<input type="text" name="plural_noun2">
+   Singular Noun 1: &nbsp&nbsp<input type="text" name="noun">
+  <br>
+  <p>Adjectives:</p>
+  Adjective 1: &nbsp&nbsp<input type="text" name="adjective1">&nbsp&nbsp&nbsp
+  Adjective 2: &nbsp&nbsp<input type="text" name="adjective2">&nbsp&nbsp&nbsp
+  Adjective 3: &nbsp&nbsp<input type="text" name="adjective3">
+  <br>
+  <p>Verbs:</p>
+  Past-tense verb 1: &nbsp&nbsp<input type="text" name="verb1">&nbsp&nbsp&nbsp
+  Verb 2: &nbsp&nbsp<input type="text" name="verb2">&nbsp&nbsp&nbsp
+  Verb 3: &nbsp&nbsp<input type="text" name="verb3">
+  <br>
+  <p>Celebrities:</p>
+  Celebrity 1: &nbsp&nbsp<input type="text" name="director1">&nbsp&nbsp&nbsp
+  Celebrity 2: &nbsp&nbsp<input type="text" name="director2">
+  <br>
+  <p>Adverb Ending in -ly: &nbsp&nbsp<input type="text" name="adverb"></p>
+   <p>Country: &nbsp&nbsp<input type="text" name="country"></p>
+  <p>Profession: &nbsp&nbsp<input type="text" name="profession"></p>
+  <br><br>
+  <button type="button" onclick="document.madlibs.result.value=madlib()">Generate your mad-lib!</button>
+  <p id="error"></p>
+  <br><br>
+  <p id="madlib_output" style="line-height: 1.5;"></p>
+  </form>
+</body>
+</html>

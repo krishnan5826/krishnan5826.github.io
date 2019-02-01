@@ -1,0 +1,30 @@
+  function addNums(input1, input2)
+{
+    var sum = input1 + input2;
+    return sum; // returns the value of 'sum' to wherever addNums() was called
+}
+
+function subtractNums(input1, input2)
+{
+    var difference = input1 - input2;
+    return difference;
+}
+
+function combo(input1, input2)
+{
+   var temp1 = addNums(input1, input2);
+   var temp2 = subtractNums(input1, input2);
+   var temp3 = addNums(temp1, temp2);
+}
+
+
+  <form name="quickEx">
+ input 1: <input type="text" name="num1">
+                 <br><br>
+    input 2: <input type="text" name="num2">
+    <br><br>
+    Result: <input type="text" name="result">
+    <br><br>
+
+    <button type="button" onclick="document.quickEx.result.value=addNums(Number(document.quickEx.num1.value),Number(document.quickEx.num2.value))">test</button>
+</form> 
