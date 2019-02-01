@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee? No!! Java (script)? Si</title>
+    <!-- link index.html to home.css and myScript.js -->
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <script src="myScript.js"></script>
+</head>
+<body>
+<h1 id="banner">Mr. K's BONANZAAA of JavaScript FUN!! SHH!</h1>
+<br>
+<p id="intro">Hello, and welcome to my JavaScript place MAN.</p>
+<br>
+<p id="main">This is the MAIN PARAGRAPH AREA. Not secondary... MAIN.</p>
+<br><br>
+<!-- make a button to replace HTML text on a document -->
+<button type="button" onclick="document.getElementById('banner').innerHTML = 'YOLO? :('">MAGIC!$@</button>
+<button type="button" onclick="document.getElementById('banner').innerHTML = 'Mr. K\'s BONANZAAA of JavaScript FUN!! SHH!'">RESET</button>
+<br><br><br>
+<!-- use buttons to modify text elements like font-size and color -->
+<!-- changes font size -->
+<button type="button" onclick="document.getElementById('main').style.fontSize = '18px'">18 pixels</button>
+<button type="button" onclick="document.getElementById('main').style.fontSize = '20px'">20 pixels</button>
+<button type="button" onclick="document.getElementById('main').style.fontSize = '22px'">22 pixels</button>
+<button type="button" onclick="document.getElementById('main').style.fontSize = '24px'">24 pixels</button>
+<button type="button" onclick="document.getElementById('main').style.fontSize = '30px'">30 pixels</button>
+<button type="button" onclick="document.getElementById('main').style.fontSize = '16px'">RESET</button>
+<br><br><br>
+<!-- changes color -->
+<button type="button" onclick="document.getElementById('main').style.color = 'blue'">BLUE</button>
+<button type="button" onclick="document.getElementById('main').style.color = '#CC0000'">RED</button>
+<button type="button" onclick="document.getElementById('main').style.color = 'green'">GREEN</button>
+<button type="button" onclick="document.getElementById('main').style.color = '#cc2eba'">FUSCHIA</button>
+<button type="button" onclick="document.getElementById('main').style.color = 'black'">RESET</button>
+<br><br><br>
+<p>JavaScript results will appear HERE:</p>
+<p id="output"></p>
+<button type="button" onclick="document.getElementById('output').innerHTML = addNumbers(23,33)">ADD</button>
+<button type="button" onclick="document.getElementById('output').innerHTML = multiplyNumbers(7,6)">MULTIPLY</button>
+<button type="button" onclick="document.getElementById('output').innerHTML = mathOps(3,4)">MATH OPS</button>
+</body>
+</html>

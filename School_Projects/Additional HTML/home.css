@@ -1,0 +1,20 @@
+/*
+Everything between the asterisks is a code comment
+blah
+blah
+see?
+ */
+body {
+    /* background-color: cornsilk; */
+    background-image: url(img/background.jpg);
+    color: white;
+}
+a {
+    color: white;
+}
+#textEnhance {
+    color: yellow;
+}
+h4 {
+    color: aquamarine;
+}

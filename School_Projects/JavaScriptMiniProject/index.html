@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Mini Projects</title>
+    <script src="myScript.js"></script>
+</head>
+<body>
+<!-- further organize content with regard to Java Script by creating FORMS on an HTML document -->
+<form name="conditional">
+    <h4>Results for conditional statements</h4>
+    <br>
+    Result: <input style="border-style: none" type="text" name="result" readonly="true" placeholder="...waiting" size="40">
+    <br><br><br>
+    <button type="button" onclick="document.conditional.result.value=wordMatch()">Word Match</button>
+    <button type="button" onclick="document.conditional.result.value=strictEqual()">Strict Equal?</button>
+</form>
+<br>
+<form name="projectOne">
+    <h4>Mini Project One - Number Compare</h4>
+    <br>
+    First Number: <input type="number" name="inputOne" placeholder="Type first number here...">
+    <br><br>
+    Second Number: <input type="number" name="inputTwo" placeholder="Type second number here...">
+    <br><br>
+    <button type="button" onclick="document.projectOne.result.value=greaterNum()">Compare!</button>
+    <br><br>
+    Result: <input style="border-style: none" type="text" name="result" readonly="true" placeholder="...waiting" size="40">
+</form>
+<br>
+<form name="projectTwo">
+    <h4>Mini Project Two - Language Translator</h4>
+    <br>
+    Type in one of the following language codes: 'kr' (Korean), 'ru' (Russian), 'de' (German), hi (Hindi), 'pl' (Polish), en (English)
+    <input name="inputOne" type="text" placeholder="Type language code here...">
+    <br><br>
+    <button type="button" onclick="document.projectTwo.result.value=helloWorld()">Translate!</button>
+    <br><br>
+    Result: <input name="result" type="text" style="border-style: none" readonly="true">
+</form>
+<form name="projectThree">
+    <h4>Mini Project Three - Assign Grade</h4>
+    <br>
+    Type in the grade you got on your last assignment:
+    <input name="inputOne" type="number" placeholder="Type your grade here...">
+    <br><br>
+    <button type="button" onclick="document.projectThree.result.value=assignGrade()">Letter Grade Converter</button>
+    <br><br>
+    Result: <input name="result" style="border-style: none" type="text" readonly="true">
+</form>
+</body>
+</html>
