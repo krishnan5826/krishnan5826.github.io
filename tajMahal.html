@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Taj Mahal Canvas Portrait</title>
+    <title>HTML Canvas Projects</title>
     <link href="tajMahal.css" rel="stylesheet" type="text/css">
     <script src="tajMahal.js"></script>
 </head>
@@ -39,8 +39,11 @@
     <a class="placeholder">|</a>
     <a href="https://krishnan5826.github.io/credits.html">Credits</a>
 </div>
-<br><br><br>
+<h1 style="text-align: center;">HTML Canvas Projects</h1>
+<br><br>
   <div class="canvas">
+    <h2>Guess the Drawing:</h2>
+    <p>Click the button to reveal the drawing that I created through the powers of HTML Canvas!</p>
     <canvas id="tajMahal" width="500" height="500"></canvas>
     <p id="statement1"></p>
     <button type="button" onclick="startAnimation()">Reveal the hidden image...</button>
@@ -53,5 +56,27 @@
     <p id="statement2" style="text-align: center;"></p>
     <audio id="music" src="relaxing_music.mp3" loop="loop"></audio> <!-- code from stackoverflow, music from https://www.youtube.com/watch?v=20eyYerDDsY -->
   </div>
+  <p>------------------------------------------------------------------------------------------------------</p>
+  <form name="difficulty">
+    <h2>Square Game</h2>
+    <p>The aim of the game is to stop the square from moving right when it hits the center. The distance the square is away from the center of the canvas is your score, which can be found after stopping the square and scrolling down. Refresh the page to play again. Enjoy!</p>
+  <canvas id="gameCanvas" width="500" height="500">
+  </canvas>
+  <br><br>
+  <!--
+  <p>Select difficulty:</p>
+  <input type="radio" id="level" value="easy">Easy
+  <input type="radio" id="level" value="medium" checked="checked">Medium
+  <input type="radio" id="level" value="hard">Hard
+  <br><br>
+  -->
+  <button type="button" onclick="startAnimation_game()">Start</button>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <button type="button" onclick="stopAnimation_game()">Stop</button>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <!--<button type="button" onclick="reset()">Reset</button>-->
+  <br>
+  <p id="score"></p>
+  </form>
 </body>
 </html>
